@@ -1,0 +1,52 @@
+Background
+==========
+N.B.: I did not previously know what a 'capped collection' or a 'tailable cursor' or an 'oplog' are.  So they are
+defined briefly (based on an hour or so of research) below.
+
+Of course I was previously mongo (NoSQL DB; JSON documents / schemas) aware, but I also had never run / used mongodb before.
+
+Capped Collection
+=================
+    A capped collection is a fixed-size list of size N.  Once we have entered data into slot N-1, the next data entry
+    point is slot 0.  In other words, we fill the array, then we begin over-writing the array at the first index.  This
+    makes a capped collection effectively a circular queue.  
+
+Cursor
+======
+    A cursor is a database iterator.  It is a pointer to a row of a resultset.  
+
+    A cursor may be 'scrollable', in which case it can move bi-directionally over the resultset.
+
+Tailable Cursor
+===============
+    A tailable cursor is a cursor that remains open after fetching the resultset.  It watches for additions to the
+    resultset.  Think 'tail -f some.log'.  
+
+Oplog
+=====
+    An oplog is a capped collection that stores an ordered history of writes to a MongoDB database.  It is the basic
+    unit for replication using mongodb.   
+
+Summary
+=======
+    An oplog isa capped collection.
+    A capped collection isa circular queue.
+    A cursor is an interator over a circular queue.
+    A tailable cursor isa cursor that gets notified when new results enter the resultset.  I.e., it is not closed by
+    default after processing every row in the resultset.
+
+    So, in the end, what we want to do is iterate a resultset, then watch the oplog
+    and do something with every new entry as it arrives.  From the documentation:
+    "MongoDB replication uses tailable cursors to tail the primary’s oplog"
+
+Files
+=====
+info
+====
+    background info: installing everything, links, etc.
+test
+====
+    basic python + mongo interactions ... has the db used
+cc
+==
+    basic capped collection tries

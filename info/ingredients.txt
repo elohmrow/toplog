@@ -1,0 +1,8 @@
+What I need
+===========
+
+- MongoDB
+- Python
+    - 2 or 3?
+    - I am using 2.7.5
+- A couple of web servers on different machines (for demo of insert from one machine, tailable cursor writes to another)

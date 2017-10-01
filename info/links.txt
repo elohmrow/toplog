@@ -1,0 +1,17 @@
+https://docs.mongodb.com/getting-started/shell/query/
+https://docs.mongodb.com/manual/reference/mongo-shell/
+https://marcobonzanini.com/2015/09/07/getting-started-with-mongodb-and-python/
+
+https://docs.mongodb.com/manual/core/capped-collections/
+https://docs.mongodb.com/manual/core/tailable-cursors/
+https://docs.mongodb.com/manual/core/replica-set-oplog/ <-- can be done on single instance for demo
+
+https://api.mongodb.com/python/current/
+http://api.mongodb.com/python/current/examples/tailable.html
+http://tugdualgrall.blogspot.ch/2015/01/how-to-create-pubsub-application-with.html
+http://blog.pythonisito.com/2013/04/mongodb-pubsub-with-capped-collections.html
+https://www.compose.com/articles/the-mongodb-oplog-and-node-js/
+https://jira.mongodb.org/browse/SERVER-12039
+
+http://tuttlem.github.io/2014/06/13/how-to-setup-an-oplog-on-a-single-mongodb-instance.html
+https://stackoverflow.com/questions/20871009/how-can-python-observe-changes-to-mongodbs-oplog
